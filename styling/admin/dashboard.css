@@ -85,11 +85,11 @@ a {
 }
 @media (max-width: 767px) {
   .sidebar {
-    width: 80px;
+    width: 58px;
     padding: 7px;
   }
   .sidebar > h3 {
-    font-size: 13px;
+    font-size: 9px;
     margin-bottom: 15px;
   }
   .sidebar > h3::before,
@@ -133,4 +133,76 @@ a {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   margin-left: 15px;
+}
+.page h1 {
+  margin: 20px 20px 40px;
+}
+.page h1::before,
+.page h1::after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+}
+.page h1::before {
+  background-color: white;
+  width: 120px;
+}
+.page h1::after {
+  background-color: black;
+  width: 40px;
+}
+.content .add {
+  height: 30px;
+  width: 60px;
+  border: none;
+}
+.content .add:hover {
+  cursor: pointer;
+}
+.resturants {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.resturants .card {
+  overflow: hidden;
+}
+.resturants .card .cover {
+  max-width: 100%;
+}
+.resturants .card .content {
+  height: 135px;
+}
+.resturants .card .info {
+  border-top: 1px solid #eee;
+  font-size: 13px;
+}
+.resturants .card .info .title {
+  position: absolute;
+  left: 50%;
+  font-size: 13px;
+  height: 27px;
+  text-transform: capitalize;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.resturants .card .info .title:hover {
+  cursor: pointer;
+}
+.wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 762px) {
+  .wrapper {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
 }
