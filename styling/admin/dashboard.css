@@ -86,7 +86,7 @@ a {
 @media (max-width: 767px) {
   .sidebar {
     width: 80px;
-    padding: 10px;
+    padding: 7px;
   }
   .sidebar > h3 {
     font-size: 13px;
@@ -96,4 +96,41 @@ a {
   .sidebar > h3::after {
     display: none;
   }
+}
+
+.content {
+  overflow: hidden;
+}
+.head .search input {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-left: 5px;
+  padding-left: 27px;
+  width: 170px;
+  transition: width 0.3s;
+  -webkit-transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  -ms-transition: width 0.3s;
+  -o-transition: width 0.3s;
+}
+.head .search input:focus {
+  width: 200px;
+}
+
+.head .search input:focus::placeholder {
+  opacity: 0;
+}
+.head .icons img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-left: 15px;
 }
