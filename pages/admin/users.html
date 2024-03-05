@@ -50,32 +50,38 @@
         </div>
         <div class="center-flex gap-20">
           <h1 class="p-relative">Users</h1>
-          <button class="add bg-green c-white btn-shape">Add</button>
+          <button class="add bg-green c-white btn-shape" id="user-create">
+            Add
+          </button>
         </div>
-        <div class="users-page d-grid m-20 gap-20">
-          <div class="user bg-white p-20 rad-6 p-relative">
-            <div class="txt-c">
-              <img class="rad-50 mt-10 mb-10 w-100 h-100" src="" alt="" />
-              <h4 class="m-0">Ali Remity</h4>
-              <p class="c-gray fs-13 mt-5 mb-0">Mis Developer</p>
-            </div>
-            <div class="icons center-flex column fs-14 p-relative">
-              <div class="mb-10">
-                <span>99 Freind</span>
-              </div>
-              <div class="mb-10">
-                <span>15 Projects</span>
-              </div>
-              <div class="mb-10">
-                <span>25 Articles</span>
-              </div>
-            </div>
-            <div class="info center-flex fs-13">
-              <button class="bg-red c-white btn-shape b-none " href="#">Remove</button>
-            </div>
-          </div>
-        </div>
+        <div class="users-page d-grid m-20 gap-20" id="users-page"></div>
       </div>
     </div>
+    <div class="pop-up" id="pop-up-user">
+      <div class="popup-content">
+        <span class="close" id="close-user">&times;</span>
+        <h2>Create User</h2>
+        <form id="userForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" required />
+          </div>
+          <button type="submit">Create User</button>
+        </form>
+      </div>
+    </div>
+    <script src="../../scripts/admin/user.js"></script>
   </body>
 </html>

@@ -51,7 +51,9 @@
         </div>
         <div class="center-flex gap-20">
           <h1 class="p-relative">Resturants</h1>
-          <button class="add bg-green c-white btn-shape">Add</button>
+          <button class="add bg-green c-white btn-shape" id="add-resturant">
+            Add
+          </button>
         </div>
         <div class="resturants d-grid gap-20 m-20">
           <div class="card bg-white rad-6 p-relative">
@@ -70,8 +72,33 @@
             </div>
           </div>
         </div>
-        <!-- End users  -->
       </div>
     </div>
+    <div class="pop-up" id="pop-up">
+      <div class="popup-content">
+        <span class="close" id="close">&times;</span>
+        <h2>Create Restaurant</h2>
+        <form id="restaurantForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="image">Image :</label>
+            <input type="file" id="file" name="image" required />
+          </div>
+          <div class="form-group">
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required />
+          </div>
+          <button type="submit">Create Restaurant</button>
+        </form>
+      </div>
+    </div>
+    <script src="../../scripts/admin/resturants.js"></script>
   </body>
 </html>
