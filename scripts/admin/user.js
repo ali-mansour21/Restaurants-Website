@@ -27,19 +27,20 @@ function createUserAction() {
     username: userNameValue.value,
     paswword: passwordValue.value,
   };
-  userId += 1;
   allUsers.push(userObject);
+  userId++;
   addToLocalStorage();
 }
 function getUsersFromLocalStorage() {
   const usersString = localStorage.getItem("allUsers");
   if (usersString) {
     allUsers = JSON.parse(usersString);
+    userId = allUsers.length;
   }
   console.log(allUsers);
 }
 function userLoader() {
-  userCards.innerHTML += "";
+  userCards.innerHTML = "";
   if (allUsers.length > 0) {
     for (let index = 0; index < allUsers.length; index++) {
       const user = allUsers[index];
