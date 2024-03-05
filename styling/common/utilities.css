@@ -19,6 +19,9 @@
 .spacebetween {
   justify-content: space-between;
 }
+.column {
+  flex-direction: column;
+}
 .f-wrap {
   flex-wrap: wrap;
 }
