@@ -63,7 +63,6 @@ function getRestaurantsFromLocalStorage() {
 function generateRestaurantCard(restaurant) {
   const card = document.createElement("div");
   const { id, name, image, description, favirote } = restaurant;
-  console.log({ id, name, image, description, favirote });
 
   card.classList.add("card", "bg-white", "rad-6", "p-relative");
 
@@ -81,7 +80,6 @@ function generateRestaurantCard(restaurant) {
   restaurantCards.appendChild(card);
 }
 function deleteRestaurant(e) {
-  console.log("triggered");
   const deleteButton = e.target;
   const selectedRestaurantId = deleteButton.dataset.setId;
   resturants = resturants.filter(
