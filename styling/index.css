@@ -21,6 +21,9 @@ section {
 .header {
   display: flex;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 18px;
   padding: 0px;
   margin: 0px;
@@ -29,26 +32,24 @@ section {
 
 .nav-header {
   display: flex;
-  flex: 1;
-  justify-content: center;
+  /* flex: 1; */
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 }
 
-nav {
-  display: block;
-}
+
 
 nav ul {
   color: white;
   align-items: center;
   margin: 0 auto;
-  padding: 0;
   list-style-type: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 35px;
   height: 80px;
-  margin-left: 500px;
   width: 100%;
   background-color: transparent;
 }
@@ -141,19 +142,19 @@ body {
   background-color: #e3f2fd;
 }
 
-.line{
+.line {
   border-right: 3px solid white;
-    height: 620px;
-    width: 350px;
+  height: 620px;
+  width: 350px;
+  margin-left: 15px;
 }
 
 .select-menu {
   position: relative;
-    bottom: -60px;
-    max-width: 320px;
-    width: 100%;
-    background-color: #fff;
-    
+  bottom: -60px;
+  max-width: 320px;
+  width: 100%;
+  background-color: #fff;
 }
 
 .select-btn {
@@ -252,4 +253,3 @@ body {
 .item.checked .check-icon {
   transform: scale(1);
 }
-

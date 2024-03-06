@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styling/index.css" />
+    <link rel="stylesheet" href="./styling/index.css" />
+    <link rel="stylesheet" href="./styling/common/utilities.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -15,7 +16,7 @@
     <title>TastyChomps</title>
   </head>
   <body>
-    <div class="header">
+    <header class="header">
       <div class="nav-header">
         <div class="logo-header">
           <a href="/index.html">
@@ -35,54 +36,60 @@
           </ul>
         </nav>
       </div>
-    </div>
-    <div class="hero-img-container">
+    </header>
+    <section class="hero-img-container">
       <div class="search-bar-container">
         <form action="" class="search-bar">
           <input type="text" placeholder="Search Anything" name="q" />
-          <button type="submit">
-            <img class="search-bar-img" src="/assets/images/search.png" />
+          <button type="submit" class="center-flex">
+            <img class="search-bar-img" src="./assets/images/search.png" />
           </button>
         </form>
       </div>
-      <img class="hero-img" src="/assets/images/4452317.jpg" alt="Hero Image" />
-    </div>
-    <div class ="line">
-      <div class="select-menu">
-        <div class="select-btn">
-          <span class="btn-text">Filter</span>
-          <span class="arrow-dwn">
-            <i class="fa-solid fa-chevron-down"></i>
-          </span>
+      <img
+        class="hero-img"
+        src="./assets/images/4452317.jpg"
+        alt="Hero Image"
+      />
+    </section>
+    <section>
+      <div class="line">
+        <div class="select-menu">
+          <div class="select-btn">
+            <span class="btn-text">Filter</span>
+            <span class="arrow-dwn">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </div>
+          <ul class="list-items">
+            <li class="item">
+              <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+              </span>
+              <span class="item-text">Lebanese</span>
+            </li>
+            <li class="item">
+              <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+              </span>
+              <span class="item-text">italian</span>
+            </li>
+            <li class="item">
+              <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+              </span>
+              <span class="item-text">Chinese</span>
+            </li>
+            <li class="item">
+              <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+              </span>
+              <span class="item-text">American</span>
+            </li>
+          </ul>
         </div>
-        <ul class="list-items">
-          <li class="item">
-            <span class="checkbox">
-              <i class="fa-solid fa-check check-icon"></i>
-            </span>
-            <span class="item-text">Lebanese</span>
-          </li>
-          <li class="item">
-            <span class="checkbox">
-              <i class="fa-solid fa-check check-icon"></i>
-            </span>
-            <span class="item-text">italian</span>
-          </li>
-          <li class="item">
-            <span class="checkbox">
-              <i class="fa-solid fa-check check-icon"></i>
-            </span>
-            <span class="item-text">Chinese</span>
-          </li>
-          <li class="item">
-            <span class="checkbox">
-              <i class="fa-solid fa-check check-icon"></i>
-            </span>
-            <span class="item-text">American</span>
-          </li>
-        </ul>
       </div>
-    </div>
-      <script src="./scripts/index.js"></script>
+    </section>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
