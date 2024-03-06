@@ -28,66 +28,83 @@ function createResturantAction() {
     category: categoryValue.value,
     favirote: 0,
   };
+  resetValues(nameValue, descriptionValue, fileValue, categoryValue);
   resturants.push(resturantObject);
-  resturantId++;
   addToLocalStorage();
+  restaurantCards.innerHTML = "";
+  getRestaurantsFromLocalStorage();
+}
+function resetValues(name, description, image, category) {
+  name.value = "";
+  description.value = "";
+  image.value = "";
+  category.value = "";
 }
 function getRestaurantsFromLocalStorage() {
   const restaurantsString = localStorage.getItem("restaurants");
   if (restaurantsString) {
     resturants = JSON.parse(restaurantsString);
     resturantId = resturants.length;
-  }
-}
-function restaurantLoader() {
-  restaurantCards.innerHTML = "";
-  if (resturants.length > 0) {
-    for (let index = 0; index < resturants.length; index++) {
-      const restaurant = resturants[index];
+    resturants.forEach((restaurant) => {
       generateRestaurantCard(restaurant);
-    }
+    });
   }
 }
+// function restaurantLoader() {
+//   restaurantCards.innerHTML = "";
+
+//   if (resturants.length > 0) {
+//     for (let index = 0; index < resturants.length; index++) {
+//       const restaurant = resturants[index];
+//       generateRestaurantCard(restaurant);
+//     }
+//   }
+// }
 function generateRestaurantCard(restaurant) {
   const card = document.createElement("div");
-  const restaurantId = restaurant.id;
+  const { id, name, image, description, favirote } = restaurant;
+  console.log({ id, name, image, description, favirote });
 
-  card.classList.add("card");
-  card.classList.add("bg-white");
-  card.classList.add("rad-6");
-  card.classList.add("p-relative");
-  card.innerHTML = `<img class="cover" src="../../assets/${restaurant.image}" alt="" />
+  card.classList.add("card", "bg-white", "rad-6", "p-relative");
+
+  card.innerHTML = `<img class="cover" src="../../assets/${image}" alt="" />
             <div class="p-20 content">
-              <h4 class="m-0">${restaurant.name}</h4>
+              <h4 class="m-0">${name}</h4>
               <p class="description c-gray mt-15 fs-14">
-                ${restaurant.description}
+                ${description}
               </p>
             </div>
             <div class="info p-15 p-relative between-flex">
-              <button  data-set-id="${restaurantId}" class="title bg-red c-white b-none btn-shape remove">Remove</button>
-              <span class="c-gray"> Favirotes: ${restaurant.favirote} </span>
-              <span class="c-gray"> 120 </span>
+              <button  data-set-id="${id}" class="title bg-red c-white b-none btn-shape remove">Remove</button>
+              <span class="c-gray"> Favirotes: ${favirote} </span>
             </div>`;
-
   restaurantCards.appendChild(card);
 }
 function deleteRestaurant(e) {
+  console.log("triggered");
   const deleteButton = e.target;
-  const selectedRestaurantId = deleteButton.dataset.restaurantId;
+  const selectedRestaurantId = deleteButton.dataset.setId;
   resturants = resturants.filter(
     (restaurant) => restaurant.id !== parseInt(selectedRestaurantId)
   );
+  restaurantCards.innerHTML = "";
   addToLocalStorage();
-  restaurantLoader();
+  getRestaurantsFromLocalStorage();
 }
 deleteButtons.forEach((button) => {
   button.addEventListener("click", deleteRestaurant);
 });
 restaurantCards.addEventListener("click", deleteRestaurant);
-resturantCreateForm.addEventListener("submit", createResturantAction);
+
+resturantCreateForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  createResturantAction();
+  close();
+});
+
 createResturant.addEventListener("click", showPopup);
 closePopUp.addEventListener("click", close);
-getRestaurantsFromLocalStorage();
+
 window.addEventListener("load", () => {
-  restaurantLoader();
+  getRestaurantsFromLocalStorage();
 });

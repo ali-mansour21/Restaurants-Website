@@ -153,6 +153,7 @@ a {
 }
 .resturants .card .cover {
   max-width: 100%;
+  height: 215px;
 }
 .resturants .card .content {
   height: 135px;
