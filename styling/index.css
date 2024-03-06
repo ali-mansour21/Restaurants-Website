@@ -290,3 +290,54 @@ nav ul li a {
 .header-resto {
   text-align: center;
 }
+
+.loyalty-program{
+  padding-top: 15px;
+  display:flex;
+  flex-direction: column;
+
+}
+.loyalty-program h1{
+  text-align: center;
+}
+.loyalty-program h3{
+  text-align: center;
+  margin-top: 10px;
+}
+.loyalty-program .container{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  width: 700px;
+  margin: 15px auto;
+  
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table th{
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+table tr:nth-child(even){
+  background-color: #fefefe;
+}
+table td{
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+
+}
+table tr:hover{
+  background-color: #f2f2f2;
+}
+
+
+
+
