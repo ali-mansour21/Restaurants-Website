@@ -330,3 +330,23 @@ table td{
 table tr:hover{
   background-color: #f2f2f2;
 }
+
+.download-our-app{
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  align-items: center;
+
+}
+
+.download-our-app img{
+  width: 300px;
+}
+
+.download-our-app h2{
+  max-width: 700px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
