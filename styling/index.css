@@ -230,7 +230,9 @@ nav ul li a {
   padding-top: 15px;
   background-color: #ffff;
 }
-
+.restaurants h1 {
+  text-align: center;
+}
 .products-section {
   margin-top: 30px;
   display: grid;
