@@ -7,21 +7,13 @@
   font-family: "Poppins", sans-serif;
 }
 
-section {
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+a {
+  text-decoration: none;
 }
-
-.dim-layer {
-  background-color: rgba(0, 0, 0, 0.455);
-  height: 100vh;
-}
-
 .header {
   display: flex;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
+  justify-content: center;
   padding: 0px;
   margin: 0px;
   background-color: black;
@@ -29,30 +21,19 @@ section {
 
 .nav-header {
   display: flex;
-  flex: 1;
+  align-items: center;
   justify-content: center;
-}
-
-.logo-header{
-  display: flex;
-}
-
-nav {
-  display: block;
+  gap: 20px;
 }
 
 nav ul {
   color: white;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0;
   list-style-type: none;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 35px;
   height: 80px;
-  margin-left: 500px;
   width: 100%;
   background-color: transparent;
 }
@@ -62,16 +43,11 @@ nav ul li {
 
 nav ul li:hover {
   opacity: 70%;
+  cursor: pointer;
 }
 
-
 nav ul li a {
-  flex-grow: 1;
-  box-sizing: border-box;
-  text-decoration: none;
   color: white;
-  box-shadow: 3px 3px 5px transparent;
-  padding: 20px;
 }
 
 .section {
@@ -82,7 +58,7 @@ nav ul li a {
 
 .hero-img-container {
   width: 100%;
-  height: 30vh;
+  height: 60vh;
   position: relative;
 }
 
@@ -142,23 +118,14 @@ nav ul li a {
   cursor: pointer;
 }
 
-body {
-  background-color: #e3f2fd;
-}
-
-/* .line{
-  border-right: 3px solid white;
-    height: 620px;
-    width: 350px;
-} */
-
 .select-menu {
   position: relative;
-    bottom: -60px;
-    max-width: 320px;
-    width: 100%;
-    background-color: #fff;
-    max-height: 38vh;
+  bottom: -60px;
+  max-width: 320px;
+  width: 100%;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .select-btn {
@@ -170,7 +137,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
   background-color: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0,);
+  box-shadow: 0 5px 10px rgba(0, 0);
 }
 
 .select-btn .btn-text {
@@ -185,8 +152,7 @@ body {
   width: 21px;
   font-size: 14px;
   border-radius: 50%;
-  background-color:#eb9320;
-  ;
+  background-color: #eb9320;
   align-items: center;
   justify-content: center;
   transform: 0.3s;
@@ -197,16 +163,19 @@ body {
 }
 
 .list-items {
-  position: relative;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 16px;
-    margin-top: 15px;
-    display: none;
+  position: absolute;
+  background-color: #f5f4f4;
+  border-radius: 5px;
+  padding: 16px;
+  width: 100%;
+  margin-top: 15px;
+  display: none;
+  transition: display 0.4s ease-in-out;
 }
 
 .select-btn.open ~ .list-items {
   display: block;
+  opacity: 100%;
 }
 
 .list-items .item {
@@ -257,20 +226,16 @@ body {
 .item.checked .check-icon {
   transform: scale(1);
 }
-
-.restaurant-filters{
-  display: flex;
-  justify-content: space-between;
-}
-
-.restaurant-filters h1{
-  text-align: left;
-    margin-right: 850px;
+.restaurants {
+  padding-top: 15px;
+  background-color: #ffff;
 }
 
 .products-section {
   margin-top: 30px;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
 }
 
 .products {
@@ -283,27 +248,45 @@ body {
 }
 
 .product-card {
-  padding: 20px;
-    gap: 10px;
-    flex-grow: 1;
-    max-width: 400px;
-    min-width: 200px;
-    width: 300px;
-    height: 350px;
-    background-color: #fffafa;
-    box-shadow: 0 0 10px 0 #000000;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
+  background-color: #f5f4f4;
+  border-radius: 5px;
+  padding-bottom: 15px;
 }
 
 .product-card > img {
   width: 100%;
-  height: 60%;
-  border-radius: 10px;
-  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.product-card .content {
+  padding: 10px;
 }
 
-.header-resto{
+.product-card .content h3 {
+  text-align: center;
+  font-size: 23px;
+}
+.product-card .content p {
+  font-size: 14px;
+}
+.product-card .review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.product-card .review button {
+  padding: 7px 10px;
+  background-color: #eb9320;
+  border: none;
+  border-radius: 5px;
+}
+.product-card .review button a {
+  color: #fff;
+}
+.product-card .review p {
+  font-size: 14px;
+}
+.header-resto {
   text-align: center;
 }
-
