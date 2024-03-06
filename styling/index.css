@@ -25,7 +25,10 @@ a {
   justify-content: center;
   gap: 20px;
 }
-
+.nav-header .logo-header img{
+  width: 40px;
+  border-radius: 50%;
+}
 nav ul {
   color: white;
   list-style-type: none;
