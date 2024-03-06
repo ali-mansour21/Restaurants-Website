@@ -21,4 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+function productCardGenerator(product) {
+  return `<div class="flex column center product-card">
+            <img src="${product.image}" alt="Product 1" />
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <button class="primary-button buy-now" product-id= ${product.id}>Buy now</button>
+          </div>`;
+}
 });
