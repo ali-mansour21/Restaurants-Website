@@ -20,7 +20,7 @@ function createUserAction() {
     userName: userName.value,
     password: password.value,
   };
-
+  userId++;
   allUsers.push(user);
   localStorage.setItem("allUsers", JSON.stringify(allUsers));
   window.location.href = "../index.html";
