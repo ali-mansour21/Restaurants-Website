@@ -90,6 +90,15 @@ document.addEventListener("DOMContentLoaded", function () {
       } Selected`;
     }
   });
+  const showMore = document.querySelectorAll(".show");
+
+  showMore.forEach((button, index) => {
+    button.addEventListener("click", (e) => {
+      const card = e.target.closest(".product-card");
+      const { name, description } = card;
+      window.location.href = `./pages/restaurant${index + 1}.html`;
+    });
+  });
   item.forEach((item) => {
     item.addEventListener("click", () => {
       item.classList.toggle("checked");

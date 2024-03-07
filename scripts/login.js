@@ -1,11 +1,12 @@
-const loginForm = document.getElementById("login");
+const loginBtn = document.getElementById("loginBtn");
+const profile = document.getElementById("profile");
+const unauth = document.getElementById("unauth");
 let allUsers = [];
-
+let auth;
 function getRestaurantsFromLocalStorage() {
   const usersString = localStorage.getItem("allUsers");
   if (usersString) {
     allUsers = JSON.parse(usersString);
-    userId = allUsers.length;
   } else {
     allUsers = []; // Initialize allUsers as an empty array if data is missing
   }
@@ -24,9 +25,19 @@ const checkUser = () => {
 
 function main(e) {
   e.preventDefault();
-  if (checkUser) {
+  if (checkUser()) {
     window.location.href = "../index.html";
   }
 }
-loginForm.addEventListener("submit", main);
+if (profile && unauth) {
+  const auth = localStorage.getItem("auth");
+  if (auth) {
+    profile.style.display = "block";
+    unauth.style.display = "none";
+  } else {
+    unauth.style.display = "block";
+    profile.style.display = "none";
+  }
+}
+loginBtn.addEventListener("click", main);
 window.addEventListener("load", getRestaurantsFromLocalStorage);
