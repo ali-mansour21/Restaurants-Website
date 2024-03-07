@@ -20,7 +20,10 @@
       <div class="nav-header">
         <div class="logo-header">
           <a href="./index.html">
-            <img src="./assets/images/WhatsApp Image 2024-03-06 at 23.47.14_2b95e120.jpg" alt="Logo" />
+            <img
+              src="./assets/images/WhatsApp Image 2024-03-06 at 23.47.14_2b95e120.jpg"
+              alt="Logo"
+            />
           </a>
         </div>
         <nav>
@@ -39,12 +42,17 @@
     </header>
     <div class="hero-img-container">
       <div class="search-bar-container">
-        <form action="" class="search-bar">
-          <input type="text" placeholder="Search Anything" name="q" />
-          <button type="submit" class="center-flex">
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search Anything"
+            name="search"
+            id="search"
+          />
+          <span type="submit"  class="center-flex">
             <img class="search-bar-img" src="./assets/images/search.png" />
-          </button>
-        </form>
+          </span>
+        </div>
       </div>
       <img class="hero-img" src="/assets/images/4452317.jpg" alt="Hero Image" />
     </div>
@@ -96,24 +104,8 @@
           </li>
         </ul>
       </div>
-      <div class="products-section">
-        <div class="products" id="products-container">
-          <div class="product-card">
-            <img src="/assets/images/PastaPia.PNG" alt="Product 1" />
-            <div class="content">
-              <h3>PastPia</h3>
-              <p>
-                Embark on a flavor-filled journey to Mexico at “Taco Town”,
-                where every bite is a fiesta of authentic Mexican cuisine and
-                festive vibes.
-              </p>
-            </div>
-            <div class="review">
-              <button><a href="#">View More</a></button>
-              <p>Review:*****</p>
-            </div>
-          </div>
-        </div>
+      <div class="products-section" id="products-container">
+        <div class="products"></div>
       </div>
     </section>
     <section class="loyalty-program">
@@ -159,37 +151,38 @@
               <td>20</td>
             </tr>
           </table>
-      </div>
-          <div class="table2">
-            <table>
-              <tr>
-                <th>Ranking System</th>
-                <th>Rewards</th>
-              </tr>
-              <tr>
-                <td>Bronze(300-pts)</td>
-                <td>40 percent book discount</td>
-              </tr>
-              <tr>
-                <td>Silver(500-pts)</td>
-                <td>One free book</td>
-              </tr>
-              <tr>
-                <td>Gold(700pts)</td>
-                <td>Behind the scenes tour</td>
-              </tr>
-            </table>
-          </div>  
+        </div>
+        <div class="table2">
+          <table>
+            <tr>
+              <th>Ranking System</th>
+              <th>Rewards</th>
+            </tr>
+            <tr>
+              <td>Bronze(300-pts)</td>
+              <td>40 percent book discount</td>
+            </tr>
+            <tr>
+              <td>Silver(500-pts)</td>
+              <td>One free book</td>
+            </tr>
+            <tr>
+              <td>Gold(700pts)</td>
+              <td>Behind the scenes tour</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </section>
-    <!-- <section class="download-our-app">
-      <h1>"Enhance your dining experience with our mobile app! Download  Tasty Chomps now to  explore our menu, make reservations, and receive exclusive offers and  rewards. Available on the App Store and Google Play."</h1>
-      <img src="./assets/social media/playstore.png">
-      <img src="./assets/social media/appstore.png">
-    </section> -->
-    <footer>
-      
-    </footer>
+    <section class="download-our-app">
+      <h2>
+        "Enhance your dining experience with our mobile app! Download Tasty
+        Chomps now to explore our menu, make reservations, and receive exclusive
+        offers and rewards. Available on the App Store and Google Play."
+      </h2>
+      <img src="./assets/images/pngwing.com.png" />
+    </section>
+    <footer></footer>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
